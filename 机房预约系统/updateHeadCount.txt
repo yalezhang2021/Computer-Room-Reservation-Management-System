@@ -1,3 +1,3 @@
- mondayAm:44  mondayPm:50  tuesdayAm:50  tuesdayPm:50  wednesdayAm:50  wednesdayPm:50  thursdayAm:50  thursdayPm:50  fridayAm:50  fridayPm:50
+ mondayAm:43  mondayPm:50  tuesdayAm:50  tuesdayPm:50  wednesdayAm:50  wednesdayPm:50  thursdayAm:50  thursdayPm:50  fridayAm:50  fridayPm:50
  mondayAm:30  mondayPm:30  tuesdayAm:30  tuesdayPm:30  wednesdayAm:30  wednesdayPm:30  thursdayAm:30  thursdayPm:30  fridayAm:30  fridayPm:30
  mondayAm:100  mondayPm:100  tuesdayAm:100  tuesdayPm:100  wednesdayAm:100  wednesdayPm:100  thursdayAm:100  thursdayPm:100  fridayAm:100  fridayPm:100

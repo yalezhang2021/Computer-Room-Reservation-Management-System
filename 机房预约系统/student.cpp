@@ -27,18 +27,31 @@ Student::Student(int id, string name, string pwd)
 //菜单界面
 void Student::subMenu()
 {
-	cout << "欢迎学生：" << this->m_Name << " 登录！" << endl;
-	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "\t\t\t\t|         机房预约系统      |" << endl;
-	cout << "\t\t\t\t|---------------------------|" << endl;
-	cout << "\t\t\t\t|         1.申请预约        |" << endl;
-	cout << "\t\t\t\t|         2.我的预约        |" << endl;
-	cout << "\t\t\t\t|         3.所有预约        |" << endl;
-	cout << "\t\t\t\t|         4.取消预约        |" << endl;
-	cout << "\t\t\t\t|         0.退出登录        |" << endl;
-	cout << "\t\t\t\t|---------------------------|" << endl;
-	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "请输入您的操作：";
+	//cout << "欢迎学生：" << this->m_Name << " 登录！" << endl;
+	//cout << "\t\t\t\t-----------------------------" << endl;
+	//cout << "\t\t\t\t|         机房预约系统      |" << endl;
+	//cout << "\t\t\t\t|---------------------------|" << endl;
+	//cout << "\t\t\t\t|         1.申请预约        |" << endl;
+	//cout << "\t\t\t\t|         2.我的预约        |" << endl;
+	//cout << "\t\t\t\t|         3.所有预约        |" << endl;
+	//cout << "\t\t\t\t|         4.取消预约        |" << endl;
+	//cout << "\t\t\t\t|         0.退出登录        |" << endl;
+	//cout << "\t\t\t\t|---------------------------|" << endl;
+	//cout << "\t\t\t\t-----------------------------" << endl;
+	//cout << "请输入您的操作：";
+
+	cout << "Welcome student：" << this->m_Name << " login！" << endl;
+	cout << "\t\t\t\t------------------------------------" << endl;
+	cout << "\t\t\t\t|         Reservation System       |" << endl;
+	cout << "\t\t\t\t|----------------------------------|" << endl;
+	cout << "\t\t\t\t|         1.Apply Reservation      |" << endl;
+	cout << "\t\t\t\t|         2.Show My Reservations   |" << endl;
+	cout << "\t\t\t\t|         3.Show All Reservations  |" << endl;
+	cout << "\t\t\t\t|         4.Cancel Reservation     |" << endl;
+	cout << "\t\t\t\t|         0.Exit                   |" << endl;
+	cout << "\t\t\t\t|----------------------------------|" << endl;
+	cout << "\t\t\t\t------------------------------------" << endl;
+	cout << "Please enter：";
 }
 
 //申请预约
@@ -48,14 +61,24 @@ void Student::ApplyReserv()
 	re.InitRestSeats();
 
 	int date, interval, roomId;
+	//cout << endl;
+	//cout << "\t\t\t\t-----------------------------" << endl;
+	//cout << "\t\t\t\t1. 周一\n";
+	//cout << "\t\t\t\t2. 周二\n";
+	//cout << "\t\t\t\t3. 周三\n";
+	//cout << "\t\t\t\t4. 周四\n";
+	//cout << "\t\t\t\t5. 周五\n";
+	//cout << "请选择日期:" << endl;
+	//cout << endl;
+
 	cout << endl;
 	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "\t\t\t\t1. 周一\n";
-	cout << "\t\t\t\t2. 周二\n";
-	cout << "\t\t\t\t3. 周三\n";
-	cout << "\t\t\t\t4. 周四\n";
-	cout << "\t\t\t\t5. 周五\n";
-	cout << "请选择日期:" << endl;
+	cout << "\t\t\t\t1. Monday\n";
+	cout << "\t\t\t\t2. Tuesday\n";
+	cout << "\t\t\t\t3. Wednesday\n";
+	cout << "\t\t\t\t4. Thursday\n";
+	cout << "\t\t\t\t5. Friday\n";
+	cout << "Please choose date:" << endl;
 	cout << endl;
 
 	while (true)
@@ -65,14 +88,14 @@ void Student::ApplyReserv()
 		{
 			break;
 		}
-		cout << "输入有误，请重新输入：";
+		cout << "The input is wrong，please reenter：";
 	}
 
 	cout << endl;
 	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "\t\t\t\t1. 上午\n";
-	cout << "\t\t\t\t2. 下午\n";
-	cout << "请选择时段:" << endl;
+	cout << "\t\t\t\t1. Morning\n";
+	cout << "\t\t\t\t2. Afternoon\n";
+	cout << "Please choose interval:" << endl;
 	cout << endl;
 
 	while (true)
@@ -82,7 +105,7 @@ void Student::ApplyReserv()
 		{
 			break;
 		}
-		cout << "输入有误，请重新输入：";
+		cout << "The input is wrong，please reenter：";
 	}
 
 	cout << endl;
@@ -99,10 +122,10 @@ void Student::ApplyReserv()
 		else if (date == 4) sDate = "thursday";
 		else sDate = "friday";
 
-		cout << "\t\t\t\t机房号:" << vCom[i].m_Id << ", 最大容量：" << vCom[i].m_Num << ", 剩余：" 
+		cout << "\t\t\t\tRoomNo.:" << vCom[i].m_Id << ", Max Seats：" << vCom[i].m_Num << ", Left Seats：" 
 			<< re.mRestSeats[i][sDate + sInterval] << endl;
 	}
-	cout << "请选择机房号:";
+	cout << "Please select Room NO.:";
 	cout << endl;
 
 	while (true)
@@ -112,11 +135,11 @@ void Student::ApplyReserv()
 		{
 			break;
 		}
-		cout << "输入有误，请重新输入：";
+		cout << "The input is wrong，please reenter：";
 	}
 
 	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "您已预约成功，正在审核中！" << endl;
+	cout << "Appointment successful！under review..." << endl;
 	//cout << "预约记录如下：" << endl;
 	//cout << "学号:" << this->m_Id << " "
 	//	<< "姓名:" << this->m_Name << " "
@@ -144,7 +167,7 @@ void Student::CheckMyReserv()
 	ReservationFile of;
 	if (of.m_Size == 0)
 	{
-		cout << "无预约记录" << endl;
+		cout << "No Record" << endl;
 		system("pause");
 		system("cls");
 		return;
@@ -157,25 +180,31 @@ void Student::CheckMyReserv()
 		{
 			count++;
 			cout << count << ". ";
-			cout << "预约日期:周" << of.m_ReservData[i]["date"];
-			cout << " 时段:" << (of.m_ReservData[i]["interval"] == "1" ? "上午" : "下午");
-			cout << " 机房:" << of.m_ReservData[i]["roomId"];
-			string status = " 状态:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
+			string dDate = "Date:";// << of.m_ReservData[i]["date"];
+			if (of.m_ReservData[i]["date"] == "1") dDate += "Monday";
+			if (of.m_ReservData[i]["date"] == "2") dDate += "Tuesday";
+			if (of.m_ReservData[i]["date"] == "3") dDate += "Wednesday";
+			if (of.m_ReservData[i]["date"] == "4") dDate += "Thursday";
+			if (of.m_ReservData[i]["date"] == "5") dDate += "Friday";
+			cout << dDate;
+			cout << " Interval:" << (of.m_ReservData[i]["interval"] == "1" ? "Morning" : "Afternoon");
+			cout << " RoomNo.:" << of.m_ReservData[i]["roomId"];
+			string status = " Status:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
 			if (of.m_ReservData[i]["status"] == "1")
 			{
-				status += "审核中";
+				status += "under review";
 			}
 			else if (of.m_ReservData[i]["status"] == "2")
 			{
-				status += "预约成功";
+				status += "successful";
 			}
 			else if (of.m_ReservData[i]["status"] == "-1")
 			{
-				status += "审核未通过，预约失败";
+				status += "failed";
 			}
 			else
 			{
-				status += "预约已取消";
+				status += "is canceld";
 			}
 			cout << status << endl;
 		}
@@ -183,7 +212,7 @@ void Student::CheckMyReserv()
 
 	if (count == 0)
 	{
-		cout << "您目前没有预约" << endl;
+		cout << "You have no reservation right now" << endl;
 		system("pause");
 		system("cls");
 		return;
@@ -199,7 +228,7 @@ void Student::CheckAllReserv()
 	ReservationFile of;
 	if (of.m_Size == 0)
 	{
-		cout << "无预约记录" << endl;
+		cout << "No Record" << endl;
 		system("pause");
 		system("cls");
 		return;
@@ -208,27 +237,31 @@ void Student::CheckAllReserv()
 	for (int i = 0; i < of.m_Size; i++)
 	{
 		cout << i + 1 << ". "; 
-		cout << "姓名:" << of.m_ReservData[i]["stuName"];
-		cout << " 学号:" << of.m_ReservData[i]["stuId"];
-		cout << " 预约日期:周" << of.m_ReservData[i]["date"];
-		cout << " 时段:" << (of.m_ReservData[i]["interval"] == "1" ? "上午" : "下午");
-		cout << " 机房:" << of.m_ReservData[i]["roomId"];
-		string status = " 状态:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
+		string dDate = "Date:";// << of.m_ReservData[i]["date"];
+		if (of.m_ReservData[i]["date"] == "1") dDate += "Monday";
+		if (of.m_ReservData[i]["date"] == "2") dDate += "Tuesday";
+		if (of.m_ReservData[i]["date"] == "3") dDate += "Wednesday";
+		if (of.m_ReservData[i]["date"] == "4") dDate += "Thursday";
+		if (of.m_ReservData[i]["date"] == "5") dDate += "Friday";
+		cout << dDate;
+		cout << " Interval:" << (of.m_ReservData[i]["interval"] == "1" ? "Morning" : "Afternoon");
+		cout << " RoomNo.:" << of.m_ReservData[i]["roomId"];
+		string status = " Status:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
 		if (of.m_ReservData[i]["status"] == "1")
 		{
-			status += "审核中";
+			status += "under review";
 		}
 		else if (of.m_ReservData[i]["status"] == "2")
 		{
-			status += "预约成功";
+			status += "successful";
 		}
 		else if (of.m_ReservData[i]["status"] == "-1")
 		{
-			status += "审核未通过，预约失败";
+			status += "failed";
 		}
 		else
 		{
-			status += "预约已取消";
+			status += "is canceld";
 		}
 		cout << status << endl;
 	}
@@ -244,7 +277,7 @@ void Student::CancelReserv()
 
 	if (of.m_Size == 0)
 	{
-		cout << "无预约记录" << endl;
+		cout << "No Record" << endl;
 		system("pause");
 		system("cls");
 		return;
@@ -253,7 +286,7 @@ void Student::CancelReserv()
 	int select;
 	int count = 0;
 	vector<int> myRecord;
-	cout << "审核中或预约成功的记录可以取消" << endl;
+	cout << "Records under review or successful appointments can be canceled" << endl;
 	for (int i = 0; i < of.m_Size; i++)
 	{
 		if (stoi(of.m_ReservData[i]["stuId"]) == this->m_Id
@@ -262,25 +295,31 @@ void Student::CancelReserv()
 			myRecord.push_back(i);
 			count++;
 			cout << count << ". ";
-			cout << "预约日期:周" << of.m_ReservData[i]["date"];
-			cout << " 时段:" << (of.m_ReservData[i]["interval"] == "1" ? "上午" : "下午");
-			cout << " 机房:" << of.m_ReservData[i]["roomId"];
-			string status = " 状态:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
+			string dDate = "Date:";// << of.m_ReservData[i]["date"];
+			if (of.m_ReservData[i]["date"] == "1") dDate += "Monday";
+			if (of.m_ReservData[i]["date"] == "2") dDate += "Tuesday";
+			if (of.m_ReservData[i]["date"] == "3") dDate += "Wednesday";
+			if (of.m_ReservData[i]["date"] == "4") dDate += "Thursday";
+			if (of.m_ReservData[i]["date"] == "5") dDate += "Friday";
+			cout << dDate;
+			cout << " Interval:" << (of.m_ReservData[i]["interval"] == "1" ? "Morning" : "Afternoon");
+			cout << " RoomNo.:" << of.m_ReservData[i]["roomId"];
+			string status = " Status:"; // 0:取消的预约 1:审核中 2:已预约 -1:预约失败
 			if (of.m_ReservData[i]["status"] == "1")
 			{
-				status += "审核中";
+				status += "under review";
 			}
 			else if (of.m_ReservData[i]["status"] == "2")
 			{
-				status += "预约成功";
+				status += "successful";
 			}
 			else if (of.m_ReservData[i]["status"] == "-1")
 			{
-				status += "审核未通过，预约失败";
+				status += "failed";
 			}
 			else
 			{
-				status += "预约已取消";
+				status += "is canceld";
 			}
 			cout << status << endl;
 		}
@@ -288,7 +327,7 @@ void Student::CancelReserv()
 
 	if (myRecord.size() == 0)
 	{
-		cout << "您当前没有预约成功或审核中的记录哦~" << endl;
+		cout << "You currently have no records of successful appointments or reviews~" << endl;
 		system("pause");
 		system("cls");
 		return;
@@ -296,11 +335,11 @@ void Student::CancelReserv()
 
 	while (true)
 	{
-		cout << "选择你要取消的预约, 按0返回：" << endl;
+		cout << "Select the appointment you want to cancel, press 0 to return.：" << endl;
 		cin >> select;
 		if (select < 0 || select > myRecord.size())
 		{
-			cout << "没有该记录，请重新输入!" << endl;
+			cout << "This record is not exist，please reenter!" << endl;
 		}			
 		else if (select == 0)
 		{
@@ -331,7 +370,7 @@ void Student::CancelReserv()
 
 			of.m_ReservData[myRecord[select - 1]]["status"] = "0";
 			of.UpdateReserv();
-			cout << "第" << select << "条预约已被取消" << endl;
+			cout << "The No." << select << " appointment is canceld" << endl;
 			break;
 		}
 	}

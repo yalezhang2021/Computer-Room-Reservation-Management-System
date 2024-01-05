@@ -24,19 +24,33 @@ Admin::Admin(string name, string pwd)
 
 void Admin::subMenu()
 {
-	cout << "欢迎管理员：" << this->m_Name << " 登录！" << endl;
-	cout << "\t\t\t\t-----------------------------\n";
-	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "\t\t\t\t|       管理员机房预约系统   |" << endl;
-	cout << "\t\t\t\t|---------------------------|" << endl;
-	cout << "\t\t\t\t|         1.添加账号        |" << endl;
-	cout << "\t\t\t\t|         2.查看账号        |" << endl;
-	cout << "\t\t\t\t|         3.查看机房        |" << endl;
-	cout << "\t\t\t\t|         4.清空预约        |" << endl;
-	cout << "\t\t\t\t|         0.退出登录        |" << endl;
-	cout << "\t\t\t\t|---------------------------|" << endl;
-	cout << "\t\t\t\t-----------------------------" << endl;
-	cout << "请输入您的操作：" << endl;
+	//cout << "欢迎管理员：" << this->m_Name << " 登录！" << endl;
+	//cout << "\t\t\t\t-----------------------------\n";
+	//cout << "\t\t\t\t-----------------------------" << endl;
+	//cout << "\t\t\t\t|       管理员机房预约系统   |" << endl;
+	//cout << "\t\t\t\t|---------------------------|" << endl;
+	//cout << "\t\t\t\t|         1.添加账号        |" << endl;
+	//cout << "\t\t\t\t|         2.查看账号        |" << endl;
+	//cout << "\t\t\t\t|         3.查看机房        |" << endl;
+	//cout << "\t\t\t\t|         4.清空预约        |" << endl;
+	//cout << "\t\t\t\t|         0.退出登录        |" << endl;
+	//cout << "\t\t\t\t|---------------------------|" << endl;
+	//cout << "\t\t\t\t-----------------------------" << endl;
+	//cout << "请输入您的操作：" << endl;
+
+	cout << "Welcome Admin：" << this->m_Name << " Login！" << endl;
+	cout << "\t\t\t\t-----------------------------------\n";
+	cout << "\t\t\t\t-----------------------------------" << endl;
+	cout << "\t\t\t\t|       Reservation System        |" << endl;
+	cout << "\t\t\t\t|---------------------------------|" << endl;
+	cout << "\t\t\t\t|         1.Add Account           |" << endl;
+	cout << "\t\t\t\t|         2.Show Accounts         |" << endl;
+	cout << "\t\t\t\t|         3.Show Room Info        |" << endl;
+	cout << "\t\t\t\t|         4.Clear All Appointments|" << endl;
+	cout << "\t\t\t\t|         0.Exit                  |" << endl;
+	cout << "\t\t\t\t|---------------------------------|" << endl;
+	cout << "\t\t\t\t-----------------------------------" << endl;
+	cout << "Enter your choice：" << endl;
 }
 
 void Admin::AddAccount()
@@ -50,12 +64,18 @@ void Admin::AddAccount()
 	while (true)
 	{
 		cout << endl;
-		cout << "请输入添加账号的类型" << endl;
-		cout << "1.添加学生账号" << endl;
-		cout << "2.添加老师账号" << endl;
-		cout << "0.返回" << endl;
+		//cout << "请输入添加账号的类型" << endl;
+		//cout << "1.添加学生账号" << endl;
+		//cout << "2.添加老师账号" << endl;
+		//cout << "0.返回" << endl;
+		//cout << endl;
+		//cout << "请输入您的操作：" << endl;
+		cout << "Choose account type" << endl;
+		cout << "1.Add Student Account" << endl;
+		cout << "2.Add Teacher Account" << endl;
+		cout << "0.Return" << endl;
 		cout << endl;
-		cout << "请输入您的操作：" << endl;
+		cout << "Please Enter：";
 
 		int select = 0;
 		cin >> select;
@@ -63,7 +83,7 @@ void Admin::AddAccount()
 
 		if (select == 0)
 		{
-			cout << "返回" << endl;
+			cout << "Return" << endl;
 			system("pause");
 			system("cls");
 			return;
@@ -72,21 +92,25 @@ void Admin::AddAccount()
 		{
 			//添加学生账号
 			fileName = STUDENT_FILE;
-			tip = "请输入学号：";
-			errorTip = "该学生账号已存在，请重新输入:";
+			//tip = "请输入学号：";
+			//errorTip = "该学生账号已存在，请重新输入:";
+			tip = "Please enter StuID：";
+			errorTip = "This StuId is already exist，please reenter:";
 			break;
 		}
 		else if (select == 2)
 		{
 			//添加老师账号
 			fileName = TEACHER_FILE;
-			tip = "请输入职工编号：";
-			errorTip = "该教师编号已存在，请重新输入:";
+			//tip = "请输入职工编号：";
+			//errorTip = "该教师编号已存在，请重新输入:";
+			tip = "Please enter StaffID：";
+			errorTip = "This StaffId is already exist，please reenter:";
 			break;
 		}
 		else
 		{
-			cout << "输入有误，请重新选择！" << endl;
+			cout << "The input is wrong, please reenter！" << endl;
 			system("pause");
 			system("cls");
 			return;
@@ -117,16 +141,16 @@ void Admin::AddAccount()
 		}
 	}
 
-	cout << "请输入姓名：" << endl;
+	cout << "Please input Name：" << endl;
 	cin >> name;
 
-	cout << "请输入密码: " << endl;
+	cout << "Please input Password: " << endl;
 	cin >> pwd;
 
 	//向文件中添加数据
 	ofs << id << " " << name << " " << pwd << " " << endl;
 
-	cout << "添加成功！" << endl;
+	cout << "Add successful！" << endl;
 
 	system("pause");
 	system("cls");
@@ -138,20 +162,23 @@ void Admin::AddAccount()
 
 void PrintStudent(Student& s)
 {
-	cout << "学生账号： " << s.m_Id << ", 姓名：" << s.m_Name << ", 密码：" << s.m_Pwd << endl;
+	cout << "StuID： " << s.m_Id << ", Name：" << s.m_Name << ", Password：" << s.m_Pwd << endl;
 }
 
 void PrintTeacher(Teacher& t)
 {
-	cout << "教师账号： " << t.m_EmpId << ", 姓名：" << t.m_Name << ", 密码" << t.m_Pwd << endl;
+	cout << "StaffID： " << t.m_EmpId << ", Name：" << t.m_Name << ", Password" << t.m_Pwd << endl;
 }
 
 void Admin::ShowAccount()
 {
 	cout << endl;
-	cout << "1. 查看所有学生" << endl;
-	cout << "2. 查看所有老师" << endl;
-	cout << "请选择查看内容：";
+	//cout << "1. 查看所有学生" << endl;
+	//cout << "2. 查看所有老师" << endl;
+	//cout << "请选择查看内容：";
+	cout << "1. Show All Student" << endl;
+	cout << "2. Show All Teacher" << endl;
+	cout << "Select：";
 	int select;
 	cin >> select;
 	cout << endl;
@@ -164,7 +191,7 @@ void Admin::ShowAccount()
 		//}
 
 		//上面的可以用for_each遍历容器，更简单
-		cout << "所有学生信息如下：" << endl;
+		cout << "All students' info：" << endl;
 		for_each(vStu.begin(), vStu.end(), PrintStudent);
 		cout << endl;
 	}
@@ -177,13 +204,13 @@ void Admin::ShowAccount()
 		//}
 
 		//上面的可以用for_each遍历容器，更简单
-		cout << "所有老师信息如下：" << endl;
+		cout << "All teachers' info：" << endl;
 		for_each(vTea.begin(), vTea.end(), PrintTeacher);
 		cout << endl;
 	}
 	else
 	{
-		cout << "输入有误，请重新输入！" << endl;
+		cout << "Input wrong, please input again！" << endl;
 	}
 
 	system("pause");
@@ -192,10 +219,10 @@ void Admin::ShowAccount()
 
 void Admin::ShowRoomInfo()
 {
-	cout << "机房信息如下：" << endl;
+	cout << "Computer Room info：" << endl;
 	for (vector<ComputerRoom>::iterator it = vCom.begin(); it != vCom.end(); it++)
 	{
-		cout << "机房号：" << it->m_Id << ", 最大容量:" << it->m_Num << endl;
+		cout << "Room No.：" << it->m_Id << ", Max Seats:" << it->m_Num << endl;
 	}
 	
 	system("pause");
@@ -208,7 +235,7 @@ void Admin::CleanReservRecord()
 	ofs.open(RESERVATION_FILE, ios::trunc);
 	ofs.close();
 
-	cout << "所有预约记录已清空！" << endl;
+	cout << "All reservation are cleared！" << endl;
 	system("pause");
 	system("cls");
 }

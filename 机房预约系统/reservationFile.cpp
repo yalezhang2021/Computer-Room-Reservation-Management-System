@@ -22,7 +22,7 @@ ReservationFile::ReservationFile()
 
 	if (!ifs.is_open())
 	{
-		cout << "文件打开失败" << endl;
+		cout << "File can not open" << endl;
 		return;
 	}
 

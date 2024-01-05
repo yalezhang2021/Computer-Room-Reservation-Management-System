@@ -50,12 +50,12 @@ void RestSeats::InitRestSeats()
 	//如果文件不存在
 	if (!ifs.is_open())
 	{
-		cout << "文件不存在，正在创建" << endl;
+		cout << "File is not existed, now is creating..." << endl;
 		//创建文件
 		ofstream of;
 		of.open(UPDATEHEADCOUNT_FILE, ios::out | ios::trunc);
 		of.close();
-		cout << "创建成功" << endl;
+		cout << "File is created." << endl;
 		return;
 	}
 
@@ -64,7 +64,7 @@ void RestSeats::InitRestSeats()
 	bool ret = false;
 	if (ifs.eof())
 	{
-		cout << "文件为空" << endl;
+		cout << "File is empty" << endl;
 		ret = true;
 		ifs.close();
 	}

@@ -1,2 +1,15 @@
-﻿  student.cpp
-  机房预约系统.vcxproj -> D:\Users\lzzha\source\repos\机房预约系统\x64\Debug\机房预约系统.exe
+﻿D:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (机房预约系统.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  admin.cpp
+  computerRoom.cpp
+  reservationFile.cpp
+D:\Users\lzzha\source\repos\机房预约系统\机房预约系统\reservationFile.cpp(8,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  restSeats.cpp
+D:\Users\lzzha\source\repos\机房预约系统\机房预约系统\restSeats.cpp(12,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  student.cpp
+  systemManager.cpp
+  teacher.cpp
+  reservationSystem.cpp
+  Generating Code...
+D:\Users\lzzha\source\repos\机房预约系统\机房预约系统\restSeats.cpp(20): warning C4715: 'RestSeats::CutString': not all control paths return a value
+D:\Users\lzzha\source\repos\机房预约系统\机房预约系统\reservationFile.cpp(16): warning C4715: 'ReservationFile::CutString': not all control paths return a value
+  机房预约系统.vcxproj -> D:\Users\lzzha\source\repos\机房预约系统\x64\Debug\Computer Room Reservation Management System.exe
