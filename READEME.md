@@ -22,7 +22,7 @@
 
 1. Login Page
 
-![image-20240105170035316](C:\Users\lzzha\AppData\Roaming\Typora\typora-user-images\image-20240105170035316.png)
+![image-20240105170035316](D:\Users\lzzha\source\repos\机房预约系统\image\image-20240105170035316.png)
 
 2. Add Account
 
